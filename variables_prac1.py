@@ -54,7 +54,7 @@ Data Flair course. Variables practice.
     
 # print_fibonacci()
 
-#* 5) Next Perfect Square - A perfect square is an integer, the square root of which is also an integer. Write a function that takes in a non-negative integer and returns the next perfect square. If the integer, however, is not a perfect square itself, it makes it known
+#* 5) Next Perfect Square - A perfect square is an integer, the square root of which is also an integer. Write a function that takes in a non-negative integer and returns the next perfect square. If the integer, however, is not a perfect square itself, it makes it known.
 # import math
 
 
@@ -65,11 +65,35 @@ Data Flair course. Variables practice.
 # print(find_next_perfect_square(4))
 
 #* 6) Remove vowels - Write a function that takes a string and removes any vowels in it
-def remove_vowels(string):
-    new_string = ""
-    for letter in string:
-        if letter.lower() not in ['a', 'e', 'i', 'o', 'u']: new_string += letter
-    return new_string
+# def remove_vowels(string):
+#     new_string = ""
+#     for letter in string:
+#         if letter.lower() not in ['a', 'e', 'i', 'o', 'u']: new_string += letter
+#     return new_string
 
 
-print(remove_vowels("She was driving MAD."))
+# print(remove_vowels("She was driving MAD."))
+
+#* 7) Volume of a sphere - Write a function that takes in a sphere's radius and calculates its volume rounded to two decimal places. You can import the value of pi from the math module for this.
+# import math
+
+
+# def calculate_sphere_volume(radius):
+#     return round(4/3*math.pi*radius**3, 2)
+
+
+# print(calculate_sphere_volume(5))
+
+#* 8) Valid password - Write a function that determines whether a string makes for a valid password. For this, it must be at least 6 characters long and at most 12 characters long. It also must have at least one letter, one digit and one special character like $, %, #, @.
+def valid_password(password):
+    p = list(password)
+    if len(password) < 6 or len(password) > 12: return False
+    if not (any(i.isdigit() for i in p)): return False
+    if not (any(i in '$%#@' for i in p)): return False
+    if not (any(i.isalpha() for i in p)): return False
+    return True
+
+
+print(valid_password('A1$123'))
+    
+    
