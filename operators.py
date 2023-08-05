@@ -145,4 +145,56 @@ Operators in Python
 
 # print(check_greater_than_mirror(73))
 
-#* 
+## Ternary operators
+# two, three = 2, 3
+# print("two" if two > three else "three")
+
+# one = 0.6
+# print("Less than zero" if one < 0 else "Between zero and one" if one >= 0 and one <= 1 else "Greater than one")
+
+#* Exercise 9) Modern Sum - Write a function to add two integers a and b, and return their sum if it doesn't lie in the inlcusive range of 9 .. 18; in which case, it should return 100.
+# def modern_sum(a, b):
+#     return 100 if (a + b >= 9 and a + b <= 18) else a + b
+
+
+# def modern_sum_logical(a, b):
+#     return 100 * (a + b >= 9 and a + b <= 18) or a + b
+
+
+# print(modern_sum(8, 10))
+# print(modern_sum_logical(5, 1))
+
+#* Exercise 10) Add Round - Write two functions. The first one should round an integer up to the next multiple of 10 if the rightmost digit is 5 or greater, else round it to down to the previous multiple of  10. The second one should return the sum of the rounded values of two integers.
+# def add_round(a, b):
+#     return round(a) + round(b)
+
+# def round(num):
+#     return num - (num % 10) + 10 if num % 10 >= 5 else num - (num % 10)
+
+
+# print(add_round(14, 16))
+# print(round(19))
+
+#* Exercise 10) BMI Calculator - Write a function that takes an individual's weight and height (in metric units - kg and cm) and calculates their BMI. It should also suggest whether this is considered underweight, normal weight, overweight or obese; use the following ranges:
+#? Less than 18.5 -> Underweight
+#? 18.5 to 24.9 -> Normal weight
+#? 25 to 29.9 -> Overweight
+#? 30 or more -> Obese
+
+# def bmi_calculator(weight, height):
+#     results(weight/(height/100)**2)
+    
+
+# def results(bmi):
+#     result = "Underweight" if bmi < 18.5 else "Normal weight" if bmi >= 18.5 and bmi < 24.9 else "Overweight" if bmi >= 25 and bmi <= 29.9 else "Obese"
+#     print(f"Your BMI is {str(round(bmi, 1))}, this is considered: {str(result)}.")
+
+
+# (bmi_calculator(79, 170))
+
+#* Exercise 11) One's Complement - Write a function that returns the one's complement of a string representing a binary number.
+def ones_complement(bin):
+    return ''.join([str((1, 0)[int(digit)]) for digit in bin])
+
+
+print(ones_complement('11010'))
