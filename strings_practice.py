@@ -121,12 +121,12 @@ Strings in Python
 # print(super_isogram("See eye to eye.")) # False
 
 #* Exercise 12) Write a function that takes in a sentence. Make it return the number of times a word has its first and last characters the same as those of the entire sentence.
-def same_subs(sentence):
-    count = 0
-    for word in sentence.split(' '):
-        if (word[0] + word[-1]).lower() == (sentence[0] + sentence[-1]).lower():
-            count += 1
-    return count
+# def same_subs(sentence):
+#     count = 0
+#     for word in sentence.split(' '):
+#         if (word[0] + word[-1]).lower() == (sentence[0] + sentence[-1]).lower():
+#             count += 1
+#     return count
 
 
-print(same_subs("This was a good day and the tests were great too! The energy is tremendous"))
+# print(same_subs("This was a good day and the tests were great too! The energy is tremendous"))
