@@ -148,3 +148,28 @@ Lists in Python.
 
 
 # print(multiply_len_x_values([1, 2, 3, 4, 5]))
+
+#* Exercise 10) Write a function that, in a range, prints out numbers with all even numbers.
+# def even_evens(start, end):
+#     evens = []
+#     for num in range(start, end+1):
+#         if all(map(lambda x: x % 2 == 0, [int(digit) for digit in str(num)])): evens.append(num)
+#     return evens
+
+
+# print(even_evens(0, 100))
+
+#* Exercise 11) Write a function that accepts a string of parentheses and extracts from it properly-closed group of parentheses.
+# def parentheses(text):
+#     groups, group = [], ''
+#     count = 0
+#     for char in text:
+#         group += char
+#         count = count + 1 if char == '(' else count -1
+#         if count == 0:
+#             groups.append(group)
+#             group = ''
+#     return groups
+
+
+# print(parentheses('((()()))())()()()'))

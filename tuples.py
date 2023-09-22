@@ -56,8 +56,25 @@ Collection of items that may be different, tuples are immutable and ordered.
 # print(any(myTuple4))
 # print(any(myTuple5))
 
-myTuple6 = ('1', 1, True, '')
-print(all(myTuple6))
+# myTuple6 = ('1', 1, True, '')
+# print(all(myTuple6))
+
+#* Exercise 1) Write a function that takes in a list of fruits holding the number of apples and oranges - tuples of such numbers. Apples have 2 points and oranges have 3 points. Make the function return the total number of points for each case.
+# def count_fruits(values):
+#     results = dict()
+#     for point in values:
+#         results[point] = (2 * point[0]) + (3 * point[1])
+#     return results
 
 
+# print(count_fruits([(2, 3), (4, 3), (4, 7)]))
 
+#* Exercise 2) Write a function that creates a tuple with a string, adding a counter to it each time until it reaches desired height.
+# def create_pyramid(string, height):
+#     myTuple = (string)
+#     for index in range(1, height+1):
+#         myTuple = (myTuple, index)
+#         print(myTuple)
+
+
+# create_pyramid("PYTHON", 10)
