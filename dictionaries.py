@@ -9,6 +9,8 @@ Built-in data type used to store collections of key-value pairs.
 """
 # Create a dictionary via comprehension
 # myDict = {x * x: x for x in range(8)}
+# myDict = {x: x * x for x in range(8)}
+
 # print(myDict)
 
 # dict2 = {1: 'apple', 'two': [1, 2, 3]}
@@ -73,9 +75,19 @@ Built-in data type used to store collections of key-value pairs.
 # dict8 = {{1:2, 2:4}:10, 8:16}
 # print(dict8) # TypeError: unhasable type: 'dict' -> A dictionary cannot be used as a key.
 
+#* Exercise 1) You are given a dictionary holding items from a store, and their prices. Write a function that returns the items with the highest price, the second-highest and the third-highest. If two items cost the same, include both.
+# def costliest_three(items):
+#     for item in [(item, price) for (item, price) in items.items() if price in sorted(items.values())[-3:]]:
+#         print(item)
 
 
+# costliest_three({'shoes': 79, 'jeans': 88, 'suit': 99, 'scarf': 25, 'socks': 8})
+
+# #* Exercise 2) Write a function that takes a list of the names of students and assigns roll numbers to first names in a lexicographic order, then prints them out.
+# def roll(names):
+#     roll_nums = {sorted(names).index(name) + 1: name.split(' ')[0] for name in sorted(names)}
+#     for roll in sorted(roll_nums):
+#         print(roll, roll_nums[roll])
 
 
-
-
+# roll(['Karl Josmain', 'Sarah Sue', 'Peggy Damper', 'Richard Genji', 'Peter Farm', 'Anne Wetherly'])
